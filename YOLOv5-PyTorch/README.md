@@ -51,10 +51,6 @@ You can train on your own dataset by either:
 The model combines:
 - **Darknet** as the backbone for feature extraction  
 - **PANet (Path Aggregation Network)** for feature fusion and object detection  
-
-You can view the architecture flowchart by opening  
-`images/YOLOv5.drawio` with [draw.io](https://app.diagrams.net/).
-
 ---
 
 ## 🏋️ Training
