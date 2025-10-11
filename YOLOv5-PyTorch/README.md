@@ -1,6 +1,6 @@
 ## YOLOv5-PyTorch
 
-![First](https://github.com/Okery/YOLOv5-PyTorch/blob/master/images/r000.jpg)
+![First]([https://github.com/Okery/YOLOv5-PyTorch/blob/master/images/r000.jpg](https://github.com/AbdulAzeezA2/portfolio-snippet-cv/blob/main/YOLOv5-PyTorch/Infer/192.jpg))
 
 A PyTorch implementation of YOLOv5.
 
