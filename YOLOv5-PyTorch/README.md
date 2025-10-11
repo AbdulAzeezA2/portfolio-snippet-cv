@@ -1,80 +1,68 @@
-## YOLOv5-PyTorch
+# YOLOv5-PyTorch
 
-![First](https://github.com/AbdulAzeezA2/portfolio-snippet-cv/blob/main/YOLOv5-PyTorch/Infer/192.jpg)
+![Example](https://github.com/AbdulAzeezA2/portfolio-snippet-cv/blob/main/YOLOv5-PyTorch/Infer/192.jpg)
 
-A PyTorch implementation of YOLOv5.
+A clean, minimal **PyTorch implementation of YOLOv5** designed for easy understanding and experimentation.  
+This project demonstrates object detection on the **Rock–Paper–Scissors dataset** and serves as a learning-oriented version of YOLOv5.
 
-This repository has two features:
-- It is pure python code and can be run immediately using PyTorch 1.4 without build
-- Simplified construction and easy to understand how the model works
+---
 
-The model is based on [ultralytics' repo](https://github.com/ultralytics/yolov5),
-and the code is using the structure of [TorchVision](https://github.com/pytorch/vision).
+## 🚀 Features
 
-## Requirements
+- **Pure Python implementation** — runs directly with PyTorch ≥ 1.4, no C/C++ build required  
+- **Lightweight and modular** — easy to read and extend  
+- **Compatible** with YOLOv5 architecture from [Ultralytics](https://github.com/ultralytics/yolov5)  
+- **TorchVision-style structure** for better integration and flexibility  
+- **Supports VOC and COCO datasets**, as well as custom datasets in COCO format  
 
-- **Windows** or **Linux**, with **Python ≥ 3.6**
+---
 
-- **[PyTorch](https://pytorch.org/) ≥ 1.6.0**
+## ⚙️ Requirements
 
-- **matplotlib** - visualizing images and results
+- **Windows** or **Linux**
+- **Python ≥ 3.6**
+- **[PyTorch ≥ 1.6.0](https://pytorch.org/)**
+- **matplotlib** – for image visualization
+- **[pycocotools](https://github.com/cocodataset/cocoapi)** – for COCO dataset evaluation  
+  - ⚠️ Windows users: install from [this fork](https://github.com/philferriere/cocoapi)
+- *(Optional)* **[NVIDIA DALI](https://developer.download.nvidia.cn/compute/redist/nvidia-dali-cuda100/)** – for faster data loading (Linux only)
 
-- **[pycocotools](https://github.com/cocodataset/cocoapi)** - for COCO dataset and evaluation; Windows version is [here](https://github.com/philferriere/cocoapi)
+> **Note:** There are known print-related issues with `pycocotools` on Windows. See [Issue #356](https://github.com/cocodataset/cocoapi/issues/356).
 
-There is a problem with pycocotools for Windows. See [Issue #356](https://github.com/cocodataset/cocoapi/issues/356).
+---
 
-Besides, it's better to remove the prints in pycocotools.
+## 🧠 Dataset
 
-**optional:**
+This repository supports **PASCAL VOC** and **COCO** datasets.  
+You can train on your own dataset by either:
+- Writing a compatible dataset loader, or  
+- Converting your dataset into **COCO-style JSON format**.
 
-- **nvidia dali (Linux only)** - a faster data loader(recommended). [Download page](https://developer.download.nvidia.cn/compute/redist/nvidia-dali-cuda100/)
+**Example Datasets:**
+- [PASCAL VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)
+- [MS COCO 2017](http://cocodataset.org/)
+- **Dataset Used for Training and Inference:**  
+  [Rock-Paper-Scissors (Roboflow)](https://universe.roboflow.com/roboflow-58fyf/rock-paper-scissors-sxsw/dataset/11)
 
-## Datasets
+---
 
-This repository supports VOC and COCO datasets.
+## 🧩 Model Architecture
 
-If you want to train your own dataset, you may:
+The model combines:
+- **Darknet** as the backbone for feature extraction  
+- **PANet (Path Aggregation Network)** for feature fusion and object detection  
 
-- write the correponding dataset code
+You can view the architecture flowchart by opening  
+`images/YOLOv5.drawio` with [draw.io](https://app.diagrams.net/).
 
-- convert your dataset to COCO-style
+---
 
-**PASCAL VOC 2012**: ```http://host.robots.ox.ac.uk/pascal/VOC/voc2012/```
+## 🏋️ Training
 
-**MS COCO 2017**: ```http://cocodataset.org/```
+Example command for training on COCO dataset (1 GPU):
 
-**Used Dataset for this repo inferance**: ```https://universe.roboflow.com/roboflow-58fyf/rock-paper-scissors-sxsw/dataset/11```
-
-
-NVIDIA DALI is strongly recommended. It may be much faster than the original data loader.
-
-Currently this repository supports COCO-style dataset with DALI.
-
-## Model
-
-The model is mainly made of Darknet and PANet.
-
-You can get its flowchart by opening ```images/YOLOv5.drawio``` with [drawio](https://app.diagrams.net/).
-
-## Training
-
-Train on COCO dataset, using 1 GPU (if you wanna use N GPUs, just set --nproc_per_node=N):
-```
-python -m torch.distributed.run --nproc_per_node=1 --use_env train.py --use-cuda --dali --mosaic \
---epochs 190 --data-dir "./data/coco2017" --ckpt-path "yolov5s_coco.pth"
-```
-A more concrete modification is in ```run.sh```.
-
-To run it:
-```
-bash ./run.sh
-```
-If you use RTX series GPUs, the code will enable automatic mixed training (AMP).
-
-## Demo
-
-- Run ```demo.py```.
-
-![example](https://github.com/AbdulAzeezA2/portfolio-snippet-cv/blob/main/YOLOv5-PyTorch/Infer/342.jpg)
-
-- Modify the parameters in ```eval.ipynb``` to test the model.
+```bash
+python -m torch.distributed.run --nproc_per_node=1 --use_env train.py \
+--use-cuda --dali --mosaic \
+--epochs 190 --data-dir "./data/coco2017" \
+--ckpt-path "yolov5s_coco.pth"
