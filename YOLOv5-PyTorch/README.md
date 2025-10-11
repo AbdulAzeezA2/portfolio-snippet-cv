@@ -44,6 +44,8 @@ If you want to train your own dataset, you may:
 **MS COCO 2017**: ```http://cocodataset.org/```
 
 **Used Dataset for this repo inferance**: ```https://universe.roboflow.com/roboflow-58fyf/rock-paper-scissors-sxsw/dataset/11```
+
+
 NVIDIA DALI is strongly recommended. It may be much faster than the original data loader.
 
 Currently this repository supports COCO-style dataset with DALI.
