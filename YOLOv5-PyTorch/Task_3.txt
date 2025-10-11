@@ -1,0 +1,24 @@
+Proposal Report
+
+(a) Write a Proposal on what is multi label dataset and how the problem can be solved.
+
+A multi-label dataset contains images where multiple objects may appear simultaneously, potentially of different classes. 
+Each object is annotated in the ground truth with its class and bounding box coordinates. 
+Object detection models like YOLO can handle multi-label datasets by learning to predict all present objects in an image, 
+producing multiple bounding boxes and class predictions.
+
+(b) what changes should be made in groundtruth.
+
+For a multi-label dataset, the ground truth must annotate every object in the image. Each object should have its class ID and bounding box coordinates.
+This allows the model to learn to detect multiple objects per image.
+
+
+(c) What updates are mandatory in any model architecture to support multi-label dataset training.
+
+For classification: Sigmoid, no softmax as softmax is use for single label. Also, BCE for classification loss per class object is applied.
+BCE loss for objectness score loss - yes/no
+ciou/giou/eiou - bbox loss regression
+
+
+
+
