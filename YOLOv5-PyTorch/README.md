@@ -73,6 +73,6 @@ If you use RTX series GPUs, the code will enable automatic mixed training (AMP).
 
 - Run ```demo.py```.
 
-![example](https://github.com/Okery/YOLOv5-PyTorch/blob/master/images/r002.jpg](https://github.com/AbdulAzeezA2/portfolio-snippet-cv/blob/main/YOLOv5-PyTorch/Infer/342.jpg)
+![example](https://github.com/AbdulAzeezA2/portfolio-snippet-cv/blob/main/YOLOv5-PyTorch/Infer/342.jpg)
 
 - Modify the parameters in ```eval.ipynb``` to test the model.
