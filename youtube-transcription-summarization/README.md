@@ -36,8 +36,8 @@ This tool provides a complete end-to-end solution for:
 Download and install Python 3.12 from [python.org/downloads](https://www.python.org/downloads/)
 
 **Important:** During installation, ensure you check:
-- ✔ Add Python to PATH
-- ✔ Install pip
+- Add Python to PATH
+- Install pip
 
 ### 2. Clone This Repository
 
