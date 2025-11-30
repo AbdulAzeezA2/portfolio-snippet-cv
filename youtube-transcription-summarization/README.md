@@ -42,7 +42,8 @@ Download and install Python 3.12 from [python.org/downloads](https://www.python.
 ### 2. Clone This Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AbdulAzeezA2/portfolio-snippet-cv.git
+cd youtube-transcription-summarization
 ```
 
 ### 3. Create Virtual Environment
