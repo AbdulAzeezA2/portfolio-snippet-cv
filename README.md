@@ -1,8 +1,8 @@
-> **Update:** Sample **DETR** (DEtection TRansformer) and **DCGAN** code added, adapted from my private repositories for public demonstration.
+> **Update:** Sample **DETR** (DEtection TRansformer), **DCGAN**, and other models have been added, adapted from private repositories for public demonstration.
 
 # portfolio-snippet-cv
 Code samples and project snippets from my work as a Computer Vision Engineer. Curated for professional presentation via LinkedIn.  
-⚙️ Areas: Computer Vision, Deep Learning, Image Processing, Python, OpenCV, PyTorch, TensorRT, etc.
+Areas: Computer Vision, Deep Learning, Image Processing, Python, OpenCV, PyTorch, TensorRT, etc.
 
 # Computer Vision Engineer – Code Samples
 
