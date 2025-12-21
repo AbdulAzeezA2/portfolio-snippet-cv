@@ -7,8 +7,8 @@ Areas: Computer Vision, Deep Learning, Image Processing, Python, OpenCV, PyTorch
 # Computer Vision Engineer – Code Samples
 
 Hi there!
-I'm a Computer Vision Engineer with 3+ years of experience, currently working at Continental AM.  
-This repository showcases a few selected code samples, and snippets that reflect my work in the areas of:
+I'm a Computer Vision Engineer with 3+ years of experience. Ex - Continental.  
+**This repository showcases a few selected code samples, and snippets that reflect my work in the areas of:**
 
 - Deep Learning (PyTorch, TensorFlow)
 - Image Processing (OpenCV, Pillow)
