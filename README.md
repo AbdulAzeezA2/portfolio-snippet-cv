@@ -1,5 +1,5 @@
-## Update:
-Sample **DETR** (DEtection TRansformer), **DCGAN**, and other models have been added, adapted from private repositories for public demonstration.
+## Update
+Sample implementations of **DETR (DEtection TRansformer)**, **DCGAN**, and other models have been added, adapted from private repositories for public demonstration.
 
 ## portfolio-snippet-cv
 
@@ -18,6 +18,8 @@ This repository showcases a **curated subset of representative code samples and 
 - **ADAS / Embedded Vision:** ONNX, TensorRT  
 - **Model Deployment & Optimization**  
 - **Experiment Tracking & Evaluation**
+
+
 ---
 
 
